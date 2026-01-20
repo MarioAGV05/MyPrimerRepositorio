@@ -1,0 +1,21 @@
+package com.mx.Refrescos;
+
+import java.util.ArrayList;
+
+public interface IMetodos {
+
+    // Agregar un refresco a la lista
+    public void create(Refresco r);
+
+    // Listar todos los refrescos
+    public void read();
+
+    // Actualizar un refresco en un índice específico
+    public void update(int indice, Refresco r);
+
+    // Eliminar un refresco en un índice específico
+    public void delete(int indice);
+
+    // Buscar un refresco en un índice específico y retornarlo
+    public Refresco buscar(int indice);
+}

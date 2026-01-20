@@ -1,0 +1,135 @@
+package com.mx.TELEFONOS;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Interactivo {
+
+    public static void main(String[] args) {
+
+        ArrayList<Telefonos> lista = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        int opcion;
+
+        do {
+            System.out.println("\n--- MENU TELEFONOS ---");
+            System.out.println("1. Agregar");
+            System.out.println("2. Mostrar");
+            System.out.println("3. Buscar por ID");
+            System.out.println("4. Editar");
+            System.out.println("5. Eliminar por ID");
+            System.out.println("6. Contar");
+            System.out.println("7. Eliminar todo");
+            System.out.println("8. Salir");
+            System.out.print("Opcion: ");
+            opcion = sc.nextInt();
+
+            switch (opcion) {
+
+                case 1: // AGREGAR
+                    System.out.print("ID: ");
+                    int id = sc.nextInt();
+
+                    boolean existe = false;
+                    for (Telefonos t : lista) {
+                        if (t.getId() == id) {
+                            existe = true;
+                        }
+                    }
+
+                    if (existe) {
+                        System.out.println("El telefono ya existe, no se puede repetir");
+                    } else {
+                        sc.nextLine();
+                        System.out.print("Marca: ");
+                        String marca = sc.nextLine();
+                        System.out.print("Modelo: ");
+                        String modelo = sc.nextLine();
+                        System.out.print("Color: ");
+                        String color = sc.nextLine();
+                        System.out.print("Costo: ");
+                        int costo = sc.nextInt();
+
+                        lista.add(new Telefonos(id, marca, modelo, color, costo));
+                        System.out.println("Telefono agregado");
+                    }
+                    break;
+
+                case 2: // MOSTRAR
+                    System.out.println("LISTA DE TELEFONOS");
+                    for (Telefonos t : lista) {
+                        System.out.println(t);
+                    }
+                    break;
+
+                case 3: // BUSCAR
+                    System.out.print("ID a buscar: ");
+                    int idBuscar = sc.nextInt();
+                    for (Telefonos t : lista) {
+                        if (t.getId() == idBuscar) {
+                            System.out.println(t);
+                        }
+                    }
+                    break;
+
+                case 4: // EDITAR
+                    System.out.print("ID a editar: ");
+                    int idEditar = sc.nextInt();
+                    sc.nextLine();
+
+                    for (Telefonos t : lista) {
+                        if (t.getId() == idEditar) {
+                            System.out.print("Nueva marca: ");
+                            t.setMarca(sc.nextLine());
+                            System.out.print("Nuevo modelo: ");
+                            t.setModelo(sc.nextLine());
+                            System.out.print("Nuevo color: ");
+                            t.setColor(sc.nextLine());
+                            System.out.print("Nuevo costo: ");
+                            t.setCosto(sc.nextInt());
+                            System.out.println("Telefono editado");
+                        }
+                    }
+                    break;
+
+                case 5: // ELIMINAR
+                    System.out.print("ID a eliminar: ");
+                    int idEliminar = sc.nextInt();
+                    boolean eliminado = false;
+
+                    for (int i = 0; i < lista.size(); i++) {
+                        if (lista.get(i).getId() == idEliminar) {
+                            lista.remove(i);
+                            eliminado = true;
+                        }
+                    }
+
+                    if (eliminado) {
+                        System.out.println("Telefono eliminado");
+                    } else {
+                        System.out.println("No se puede eliminar, el telefono no existe");
+                    }
+                    break;
+
+                case 6: // CONTAR
+                    System.out.println("Total de telefonos: " + lista.size());
+                    break;
+
+                case 7: // ELIMINAR TODO
+                    lista.clear();
+                    System.out.println("Lista eliminada");
+                    break;
+
+                case 8: // SALIR
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opcion invalida");
+            }
+
+        } while (opcion != 8);
+
+        sc.close();
+    }
+}

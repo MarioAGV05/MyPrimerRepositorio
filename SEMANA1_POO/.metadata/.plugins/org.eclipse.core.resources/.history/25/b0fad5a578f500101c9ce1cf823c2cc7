@@ -1,0 +1,70 @@
+package com.mx.TELEFONOS;
+
+import java.util.ArrayList;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+        ArrayList<Telefonos> lista = new ArrayList<>();
+
+        // AGREGAR
+        lista.add(new Telefonos(1, "Samsung", "A54", "Negro", 8500));
+        lista.add(new Telefonos(2, "Apple", "iPhone 13", "Blanco", 18000));
+        lista.add(new Telefonos(3, "Xiaomi", "Redmi Note 12", "Azul", 6200));
+        lista.add(new Telefonos(4, "Motorola", "G Power", "Verde", 7000));
+        lista.add(new Telefonos(5, "Huawei", "P40", "Rojo", 9500));
+
+        // MOSTRAR ORIGINAL
+        System.out.println("LISTA ORIGINAL");
+        for (Telefonos t : lista) {
+            System.out.println(t);
+        }
+
+        // BUSCAR
+        System.out.println("\nBUSCAR TELEFONO ID 3");
+        for (Telefonos t : lista) {
+            if (t.getId() == 3) {
+                System.out.println(t);
+            }
+        }
+
+        // EDITAR
+        System.out.println("\nEDITAR TELEFONO ID 4");
+        for (Telefonos t : lista) {
+            if (t.getId() == 4) {
+                t.setColor("Negro");
+                t.setCosto(7500);
+                System.out.println(t);
+            }
+        }
+
+        // ELIMINAR
+        System.out.println("\nELIMINAR TELEFONO ID 2");
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).getId() == 2) {
+                lista.remove(i);
+                System.out.println("Telefono eliminado");
+            }
+        }
+
+        // LISTA FINAL
+        System.out.println("\nLISTA FINAL");
+        for (Telefonos t : lista) {
+            System.out.println(t);
+        }
+
+        // CONTAR
+        System.out.println("\nTOTAL DE TELEFONOS: " + lista.size());
+
+        // ELIMINAR TODO
+        lista.clear();
+
+        // VALIDAR
+        if (lista.isEmpty()) {
+            System.out.println("\nLA LISTA ESTA VACIA");
+        }
+    }
+}
+
+

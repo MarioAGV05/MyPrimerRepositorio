@@ -1,0 +1,194 @@
+package com.mx.TELEFONOS;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Interactivo {
+
+    public static void main(String[] args) {
+
+        ArrayList<Telefonos> lista = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        
+        // AGREGAR
+        lista.add(new Telefonos(1, "Samsung", "A54", "Negro", 8500));
+        lista.add(new Telefonos(2, "Apple", "iPhone 13", "Blanco", 18000));
+        lista.add(new Telefonos(3, "Xiaomi", "Redmi Note 12", "Azul", 6200));
+        lista.add(new Telefonos(4, "Motorola", "G Power", "Verde", 7000));
+        lista.add(new Telefonos(5, "Huawei", "P40", "Rojo", 9500));
+
+        int opcion;
+        do {
+            System.out.println("\nMENU");
+            System.out.println("1. Agregar");
+            System.out.println("2. Mostrar");
+            System.out.println("3. Buscar por modelo");
+            System.out.println("4. Editar por ID");
+            System.out.println("5. Eliminar por modelo");
+            System.out.println("6. Contar");
+            System.out.println("7. Eliminar todo");
+            System.out.println("8. Salir");
+            System.out.print("Opcion: ");
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+
+            case 1: // AGREGAR
+                System.out.print("ID: ");
+                int nuevoId = sc.nextInt();
+                sc.nextLine();
+
+                boolean idRepetido = false;
+
+                for (Telefonos t : lista) {
+                    if (t.getId() == nuevoId) {
+                        idRepetido = true;
+                    }
+                }
+
+                if (idRepetido) {
+                    System.out.println("Ese ID ya existe y no se puede repetir");
+                    break;
+                }
+
+                System.out.print("Marca: ");
+                String marca = sc.nextLine();
+
+                System.out.print("Modelo: ");
+                String modelo = sc.nextLine();
+
+                System.out.print("Color: ");
+                String color = sc.nextLine();
+
+                System.out.print("Costo: ");
+                int costo = sc.nextInt();
+                sc.nextLine();
+
+                lista.add(new Telefonos(nuevoId, marca, modelo, color, costo));
+                System.out.println("Telefono agregado correctamente");
+                break;
+
+                case 2: // MOSTRAR
+                    if (lista.isEmpty()) {
+                        System.out.println("La lista esta vacia");
+                    } else {
+                        System.out.println("LISTA DE TELEFONOS");
+                        for (Telefonos t : lista) {
+                            System.out.println(t);
+                        }
+                    }
+                    break;
+
+                case 3: // BUSCAR POR MODELO
+                    System.out.print("Modelo a buscar: ");
+                    String buscarModelo = sc.nextLine();
+
+                    boolean encontrado = false;
+                    for (Telefonos t : lista) {
+                        if (t.getModelo().equalsIgnoreCase(buscarModelo)) {
+                            System.out.println(t);
+                            encontrado = true;
+                        }
+                    }
+
+                    if (!encontrado) {
+                        System.out.println("Ese telefono no existe en la lista");
+                    }
+                    break;
+
+                case 4: // EDITAR POR ID
+                    System.out.print("ID a editar: ");
+                    int idEditar = sc.nextInt();
+                    sc.nextLine();
+
+                    boolean editado = false;
+
+                    for (Telefonos t : lista) {
+                        if (t.getId() == idEditar) {
+
+                            System.out.print("Nueva marca: ");
+                            String nuevaMarca = sc.nextLine();
+
+                            System.out.print("Nuevo modelo: ");
+                            String nuevoModelo = sc.nextLine();
+
+                            if (existeModelo(lista, nuevoModelo)) {
+                                System.out.println("No se puede editar, ese modelo ya existe");
+                                break;
+                            }
+
+                            System.out.print("Nuevo color: ");
+                            String nuevoColor = sc.nextLine();
+
+                            System.out.print("Nuevo costo: ");
+                            int nuevoCosto = sc.nextInt();
+                            sc.nextLine();
+
+                            t.setMarca(nuevaMarca);
+                            t.setModelo(nuevoModelo);
+                            t.setColor(nuevoColor);
+                            t.setCosto(nuevoCosto);
+
+                            System.out.println("Telefono editado correctamente");
+                            editado = true;
+                        }
+                    }
+
+                    if (!editado) {
+                        System.out.println("El telefono no existe");
+                    }
+                    break;
+
+                case 5: // ELIMINAR POR MODELO
+                    System.out.print("Modelo a eliminar: ");
+                    String modeloEliminar = sc.nextLine();
+
+                    boolean eliminado = false;
+
+                    for (int i = 0; i < lista.size(); i++) {
+                        if (lista.get(i).getModelo().equalsIgnoreCase(modeloEliminar)) {
+                            lista.remove(i);
+                            eliminado = true;
+                        }
+                    }
+
+                    if (eliminado) {
+                        System.out.println("Telefono eliminado correctamente");
+                    } else {
+                        System.out.println("Ese telefono no existe");
+                    }
+                    break;
+
+                case 6: // CONTAR
+                    System.out.println("Total de telefonos: " + lista.size());
+                    break;
+
+                case 7: // ELIMINAR TODO
+                    lista.clear();
+                    System.out.println("Todos los telefonos fueron eliminados");
+                    break;
+
+                case 8:
+                    System.out.println("Saliendo...");
+                    break;
+
+                default:
+                    System.out.println("Opcion invalida");
+            }
+
+        } while (opcion != 8);
+
+        sc.close();
+    }
+
+    // VALIDAR MODELO REPETIDO
+    public static boolean existeModelo(ArrayList<Telefonos> lista, String modelo) {
+        for (Telefonos t : lista) {
+            if (t.getModelo().equalsIgnoreCase(modelo)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}

@@ -1,0 +1,411 @@
+!SESSION 2026-01-19 09:25:36.761 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-19 09:26:11.449
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-19 09:27:56.204
+!MESSAGE Logback config file: C:\Users\User\OneDrive\Desktop\CURSO ENUCOM\SEMANA1_POO\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.terminal.view.ui 2 0 2026-01-19 09:28:11.920
+!MESSAGE Join was called on job "Detect WSL Instances" while JobManager is suspended, this will not work as expected!
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:1014)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:363)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:601)
+	at org.eclipse.terminal.view.ui.internal.local.showin.detectors.DetectWSL.getEntries(DetectWSL.java:79)
+	at org.eclipse.terminal.view.ui.internal.local.showin.detectors.DetectWSL.hasEntries(DetectWSL.java:49)
+	at org.eclipse.terminal.view.ui.internal.local.showin.ExternalExecutablesManager.hasEntries(ExternalExecutablesManager.java:68)
+	at org.eclipse.terminal.view.ui.internal.ExternalExecutablesState.<init>(ExternalExecutablesState.java:29)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:236)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:1034)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:286)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:65)
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:168)
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104)
+	at org.eclipse.ui.internal.Workbench$33.runWithException(Workbench.java:2435)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4896)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:93)
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2430)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1775)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2886)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:670)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-01-19 09:33:40.591
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 0 2026-01-19 09:37:24.253
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTError: Unspecified error Aborting Edge initialization after 5 retries with result -2147024726
+	at org.eclipse.swt.SWT.error(SWT.java:4975)
+	at org.eclipse.swt.browser.Edge.lambda$15(Edge.java:730)
+	at org.eclipse.swt.browser.Edge$HandleCoreWebView2SwtCallback.Invoke(Edge.java:276)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:824)
+	at org.eclipse.jface.window.Window.open(Window.java:804)
+	at org.eclipse.jface.dialogs.MessageDialog.open(MessageDialog.java:608)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$4(WindowsDefenderConfigurator.java:241)
+	at org.eclipse.swt.widgets.Display.lambda$6(Display.java:4933)
+	at org.eclipse.ui.internal.PendingSyncExec.run(PendingSyncExec.java:68)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:166)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:132)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4137)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3753)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:824)
+	at org.eclipse.jface.window.Window.open(Window.java:804)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:130)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:581)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:415)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4364)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1217)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4162)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3750)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1147)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1038)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:677)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+!SESSION 2026-01-19 12:42:22.776 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-19 12:46:21.849
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-01-19 12:46:58.837
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-19 12:47:33.463
+!MESSAGE Logback config file: C:\Users\User\OneDrive\Desktop\CURSO ENUCOM\SEMANA1_POO\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.osgi 4 0 2026-01-19 12:47:44.107
+!MESSAGE Application error
+!STACK 1
+org.eclipse.swt.SWTError: No more handles
+	at org.eclipse.swt.SWT.error(SWT.java:4980)
+	at org.eclipse.swt.SWT.error(SWT.java:4865)
+	at org.eclipse.swt.SWT.error(SWT.java:4836)
+	at org.eclipse.swt.widgets.Widget.error(Widget.java:510)
+	at org.eclipse.swt.widgets.Control.createHandle(Control.java:689)
+	at org.eclipse.swt.widgets.Scrollable.createHandle(Scrollable.java:143)
+	at org.eclipse.swt.widgets.Composite.createHandle(Composite.java:294)
+	at org.eclipse.swt.widgets.Control.createWidget(Control.java:719)
+	at org.eclipse.swt.widgets.Scrollable.createWidget(Scrollable.java:158)
+	at org.eclipse.swt.widgets.Control.<init>(Control.java:133)
+	at org.eclipse.swt.widgets.Scrollable.<init>(Scrollable.java:85)
+	at org.eclipse.swt.widgets.Composite.<init>(Composite.java:99)
+	at org.eclipse.ui.splash.BasicSplashHandler.getBundleProgressMonitor(BasicSplashHandler.java:141)
+	at org.eclipse.ui.splash.BasicSplashHandler.getContent(BasicSplashHandler.java:231)
+	at org.eclipse.ui.internal.splash.EclipseSplashHandler.init(EclipseSplashHandler.java:99)
+	at org.eclipse.ui.internal.Workbench$3.run(Workbench.java:865)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.Workbench.createSplashWrapper(Workbench.java:880)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:642)
+	at org.eclipse.swt.internal.DPIUtil.runWithAutoScaleValue(DPIUtil.java:472)
+	at org.eclipse.ui.internal.Workbench$AutoscaleAdaptation.runWithInitialAutoScaleValue(Workbench.java:3683)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:665)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+!SESSION 2026-01-19 12:46:47.203 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-19 12:46:52.783
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY org.eclipse.core.resources 2 10035 2026-01-19 12:48:06.747
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-19 12:48:08.428
+!MESSAGE Logback config file: C:\Users\User\OneDrive\Desktop\CURSO ENUCOM\SEMANA1_POO\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.terminal.view.ui 2 0 2026-01-19 12:48:11.874
+!MESSAGE Join was called on job "Detect WSL Instances" while JobManager is suspended, this will not work as expected!
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:1014)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:363)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:601)
+	at org.eclipse.terminal.view.ui.internal.local.showin.detectors.DetectWSL.getEntries(DetectWSL.java:79)
+	at org.eclipse.terminal.view.ui.internal.local.showin.detectors.DetectWSL.hasEntries(DetectWSL.java:49)
+	at org.eclipse.terminal.view.ui.internal.local.showin.ExternalExecutablesManager.hasEntries(ExternalExecutablesManager.java:68)
+	at org.eclipse.terminal.view.ui.internal.ExternalExecutablesState.<init>(ExternalExecutablesState.java:29)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:236)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:1034)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:286)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:65)
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:168)
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104)
+	at org.eclipse.ui.internal.Workbench$33.runWithException(Workbench.java:2435)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4896)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:93)
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2430)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1775)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2886)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:670)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-01-19 12:49:52.858
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-01-19 12:51:40.842
+!MESSAGE Failed to retrieve Microsoft Defender status.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to retrieve Microsoft Defender status.
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderActive(WindowsDefenderConfigurator.java:332)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Process terminated with unexpected result:
+
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderActive(WindowsDefenderConfigurator.java:329)
+	... 4 more
+!SUBENTRY 1 org.eclipse.ui.workbench 4 0 2026-01-19 12:51:40.843
+!MESSAGE Failed to retrieve Microsoft Defender status.
+!STACK 0
+java.io.IOException: Process terminated with unexpected result:
+
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderActive(WindowsDefenderConfigurator.java:329)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.ui 4 0 2026-01-19 15:32:28.001
+!MESSAGE AbortCompilation computing hover information in Interactivo.java at offset 1218
+!STACK 0
+org.eclipse.jdt.internal.compiler.problem.AbortCompilation: 
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:11610)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:12005)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.parse(Parser.java:11946)
+	at org.eclipse.jdt.internal.compiler.parser.Parser.dietParse(Parser.java:10333)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.parse(CompilationUnitResolver.java:656)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver.toCompilationUnit(CompilationUnitResolver.java:1424)
+	at org.eclipse.jdt.core.dom.CompilationUnitResolver$ECJCompilationUnitResolver.toCompilationUnit(CompilationUnitResolver.java:109)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateASTCached(ASTParser.java:1410)
+	at org.eclipse.jdt.core.dom.ASTParser.lambda$1(ASTParser.java:1289)
+	at org.eclipse.jdt.internal.core.JavaModelManager.cacheZipFiles(JavaModelManager.java:5709)
+	at org.eclipse.jdt.core.dom.ASTParser.internalCreateAST(ASTParser.java:1289)
+	at org.eclipse.jdt.core.dom.ASTParser.createAST(ASTParser.java:933)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocContentAccessUtility.createAST(CoreJavadocContentAccessUtility.java:350)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocContentAccessUtility.getJavadocNode(CoreJavadocContentAccessUtility.java:318)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.javadoc2HTML(CoreJavadocAccess.java:423)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.getHTMLContentFromSource(CoreJavadocAccess.java:363)
+	at org.eclipse.jdt.core.manipulation.internal.javadoc.CoreJavadocAccess.getHTMLContent(CoreJavadocAccess.java:229)
+	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:49)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:794)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:712)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:704)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:131)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$1.run(TextViewerHoverManager.java:155)
+	Suppressed: java.lang.Throwable: Source line 32 :
+-----
+            System.out.println("\nMENU");
+            System.out.println("1. Agregar");
+            System.out.println("2. Mostrar");
+            System.out.println("3. Buscar por modelo");
+            System.out.println("4. Editar por ID");
+            System.out.println("5. Eliminar por modelo");
+            System.out.println("6. Contar");
+            System.out.println("7. Eliminar todo");
+            System.out.println("8. Salir");
+            System.out.print("Opcion: ");
+            opcion = sc.|nextInt();
+-----
+		at org.eclipse.jdt.internal.ui.util.SelectionUtil.logException(SelectionUtil.java:157)
+		at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:178)
+		... 3 more
+!SESSION 2026-01-20 08:13:11.138 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-20 08:19:58.810
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+!SESSION 2026-01-20 08:13:11.125 -----------------------------------------------
+eclipse.buildId=4.38.0.20251204-0849
+java.version=21.0.9
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=es_MX
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-20 08:19:58.815
+!MESSAGE Activated before the state location was initialized. Retry after the state location is initialized.
+
+!ENTRY ch.qos.logback.classic 1 0 2026-01-20 08:21:00.651
+!MESSAGE Logback config file: C:\Users\User\OneDrive\Desktop\CURSO ENUCOM\SEMANA1_POO\.metadata\.plugins\org.eclipse.m2e.logback\logback.2.7.101.20251017-1242.xml
+
+!ENTRY org.eclipse.terminal.view.ui 2 0 2026-01-20 08:21:19.915
+!MESSAGE Join was called on job "Detect WSL Instances" while JobManager is suspended, this will not work as expected!
+!STACK 0
+java.lang.IllegalStateException
+	at org.eclipse.core.internal.jobs.JobManager.join(JobManager.java:1014)
+	at org.eclipse.core.internal.jobs.InternalJob.join(InternalJob.java:363)
+	at org.eclipse.core.runtime.jobs.Job.join(Job.java:601)
+	at org.eclipse.terminal.view.ui.internal.local.showin.detectors.DetectWSL.getEntries(DetectWSL.java:79)
+	at org.eclipse.terminal.view.ui.internal.local.showin.detectors.DetectWSL.hasEntries(DetectWSL.java:49)
+	at org.eclipse.terminal.view.ui.internal.local.showin.ExternalExecutablesManager.hasEntries(ExternalExecutablesManager.java:68)
+	at org.eclipse.terminal.view.ui.internal.ExternalExecutablesState.<init>(ExternalExecutablesState.java:29)
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:236)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:1034)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:286)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:65)
+	at org.eclipse.ui.internal.services.WorkbenchServiceRegistry.getSourceProviders(WorkbenchServiceRegistry.java:168)
+	at org.eclipse.ui.internal.services.SourceProviderService.readRegistry(SourceProviderService.java:104)
+	at org.eclipse.ui.internal.Workbench$33.runWithException(Workbench.java:2435)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:183)
+	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:136)
+	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4896)
+	at org.eclipse.ui.internal.StartupThreading.runWithoutExceptions(StartupThreading.java:93)
+	at org.eclipse.ui.internal.Workbench.initializeDefaultServices(Workbench.java:2430)
+	at org.eclipse.ui.internal.Workbench.init(Workbench.java:1775)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2886)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:670)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:583)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:185)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:219)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:149)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:115)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:467)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:298)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:615)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:563)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1415)
+
+!ENTRY org.eclipse.egit.ui 2 0 2026-01-20 08:25:04.304
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\User'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.workbench 4 0 2026-01-20 08:28:22.348
+!MESSAGE Failed to retrieve Microsoft Defender status.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Failed to retrieve Microsoft Defender status.
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderActive(WindowsDefenderConfigurator.java:332)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.io.IOException: Process terminated with unexpected result:
+
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderActive(WindowsDefenderConfigurator.java:329)
+	... 4 more
+!SUBENTRY 1 org.eclipse.ui.workbench 4 0 2026-01-20 08:28:22.349
+!MESSAGE Failed to retrieve Microsoft Defender status.
+!STACK 0
+java.io.IOException: Process terminated with unexpected result:
+
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.isWindowsDefenderActive(WindowsDefenderConfigurator.java:329)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.runExclusionCheck(WindowsDefenderConfigurator.java:159)
+	at org.eclipse.ui.internal.WindowsDefenderConfigurator.lambda$0(WindowsDefenderConfigurator.java:106)
+	at org.eclipse.core.runtime.jobs.Job$2.run(Job.java:187)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)

@@ -1,0 +1,63 @@
+package com.mx.TELEFONOS;
+
+public class Telefonos {
+
+    private int id;
+    private String marca;
+    private String modelo;
+    private String color;
+    private int costo;
+
+    public Telefonos(int id, String marca, String modelo, String color, int costo) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        this.costo = costo;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getCosto() {
+        return costo;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setCosto(int costo) {
+        this.costo = costo;
+    }
+
+    @Override
+    public String toString() {
+        return "ID: " + id +
+               ", Marca: " + marca +
+               ", Modelo: " + modelo +
+               ", Color: " + color +
+               ", Costo: $" + costo;
+    }
+}

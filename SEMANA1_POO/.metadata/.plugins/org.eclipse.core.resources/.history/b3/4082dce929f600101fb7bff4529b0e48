@@ -1,0 +1,10 @@
+package com.mx.Refrescos;
+
+public interface IMetodos {
+	
+    public void create();
+    public void read();
+    public void update(int indice, Refresco r);
+    public void delete(int indice);
+    public Refresco buscar(int indice);
+}

@@ -1,0 +1,6 @@
+INDEX VERSION 1.134+C:\Users\User\OneDrive\Desktop\CURSO ENUCOM\SEMANA1_POO\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+1791528521.index
+4089569267.index
+3509641889.index
+1315205789.index

@@ -1,0 +1,70 @@
+package com.mx.TELEFONOS;
+
+import java.util.ArrayList;
+
+public class Principal {
+
+    public static void main(String[] args) {
+
+        ArrayList<Telefonos> lista = new ArrayList<>();
+
+        // AGREGAR
+        lista.add(new Telefonos(1, "Samsung", "A54", "Negro", 8500));
+        lista.add(new Telefonos(2, "Apple", "iPhone 13", "Blanco", 18000));
+        lista.add(new Telefonos(3, "Xiaomi", "Redmi Note 12", "Azul", 6200));
+        lista.add(new Telefonos(4, "Motorola", "G Power", "Verde", 7000));
+        lista.add(new Telefonos(5, "Huawei", "P40", "Rojo", 9500));
+
+        // MOSTRAR
+        System.out.println("LISTA DE TELEFONOS");
+        for (Telefonos t : lista) {
+            System.out.println(t);
+        }
+
+        //  BUSCAR
+        int idBuscar = 3;
+        System.out.println("\nBUSCAR TELEFONO CON ID " + idBuscar);
+        for (Telefonos t : lista) {
+            if (t.getId() == idBuscar) {
+                System.out.println(t);
+            }
+        }
+
+        //  EDITAR
+        int idEditar = 4;
+        for (Telefonos t : lista) {
+            if (t.getId() == idEditar) {
+                t.setColor("Negro");
+                t.setCosto(7500);
+            }
+        }
+
+        //   ELIMINAR
+        int idEliminar = 2;
+        for (int i = 0; i < lista.size(); i++) {
+            if (lista.get(i).getId() == idEliminar) {
+                lista.remove(i);
+            }
+        }
+
+        // LISTA CON CAMBIOS 
+        System.out.println("\nLISTA ACTUALIZADA");
+        for (Telefonos t : lista) {
+            System.out.println(t);
+        }
+
+        // 6️⃣ CONTAR
+        System.out.println("\nTOTAL DE TELEFONOS: " + lista.size());
+
+        // 7️⃣ ELIMINAR TODO
+        lista.clear();
+
+        // 8️⃣ VALIDAR
+        System.out.println("\nVALIDACION FINAL");
+        if (lista.isEmpty()) {
+            System.out.println("LA LISTA ESTA VACIA");
+        } else {
+            System.out.println("LA LISTA NO ESTA VACIA");
+        }
+    }
+}

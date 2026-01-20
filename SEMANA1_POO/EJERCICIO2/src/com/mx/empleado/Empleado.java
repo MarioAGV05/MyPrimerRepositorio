@@ -1,0 +1,82 @@
+package com.mx.empleado;
+
+public class Empleado {
+	
+	private String nombre;
+	private String apellido;
+	private String apellidoM;
+	private Long telefono;
+	private int edad;
+	private double sueldo;
+	
+	public Empleado() {
+		
+	}
+
+	public Empleado(String nombre, String apellido, String apellidoM, Long telefono, int edad, double sueldo) {
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.apellidoM = apellidoM;
+		this.telefono = telefono;
+		this.edad = edad;
+		this.sueldo = sueldo;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	public String getApellidoM() {
+		return apellidoM;
+	}
+
+	public void setApellidoM(String apellidoM) {
+		this.apellidoM = apellidoM;
+	}
+
+	public Long getTelefono() {
+		return telefono;
+	}
+
+	public void setTelefono(Long telefono) {
+		this.telefono = telefono;
+	}
+
+	public int getEdad() {
+		return edad;
+	}
+
+	public void setEdad(int edad) {
+		this.edad = edad;
+	}
+
+	public double getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(double sueldo) {
+		this.sueldo = sueldo;
+	}
+
+	@Override
+	public String toString() {
+		return "Empleado [nombre= " + nombre + ", apellido= " + apellido + ", apellidoM= " + apellidoM + ", telefono= "
+				+ telefono + ", edad= " + edad + ", sueldo= " + sueldo + "]\n";
+	}
+	
+	
+	
+
+}

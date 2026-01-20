@@ -1,0 +1,36 @@
+package com.mx.refrescos;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        Implementacion imp = new Implementacion();
+
+        // Crear refrescos
+        Refresco r1 = new Refresco("Coca Cola", "Cola", "Coca-Cola", "Classic", "500ml", 15.0);
+        Refresco r2 = new Refresco("Pepsi", "Cola", "Pepsi", "Regular", "600ml", 14.0);
+        Refresco r3 = new Refresco("Fanta", "Naranja", "Coca-Cola", "Normal", "500ml", 12.5);
+
+        // Agregar refrescos (índice opcional)
+        imp.create(0, r1);
+        imp.create(1, r2);
+        imp.create(5, r3); // índice fuera de rango, se agrega al final automáticamente
+
+        // Listar refrescos
+        System.out.println("Lista inicial:");
+        imp.read();
+
+        // Buscar un refresco por índice
+        System.out.println("Buscado índice 1: " + imp.buscar(1) + "\n");
+
+        // Actualizar refresco en índice 0
+        Refresco rNuevo = new Refresco("Coca Cola", "Cola", "Coca-Cola", "Zero", "500ml", 16.0);
+        imp.update(0, rNuevo);
+        System.out.println("Después de actualizar índice 0:");
+        imp.read();
+
+        // Eliminar refresco en índice 2
+        imp.delete(2);
+        System.out.println("Después de eliminar índice 2:");
+        imp.read();
+    }
+}
