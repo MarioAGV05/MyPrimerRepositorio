@@ -17,7 +17,7 @@
 	</section>
 	<section name="JavaProjectWizard.dialogBounds">
 		<item key="DIALOG_X_ORIGIN" value="28"/>
-		<item key="DIALOG_Y_ORIGIN" value="-6"/>
+		<item key="DIALOG_Y_ORIGIN" value="-50"/>
 		<item key="DIALOG_WIDTH" value="746"/>
 		<item key="DIALOG_HEIGHT" value="720"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
@@ -33,7 +33,7 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="316"/>
+		<item key="DIALOG_X_ORIGIN" value="204"/>
 		<item key="DIALOG_Y_ORIGIN" value="0"/>
 		<item key="DIALOG_WIDTH" value="574"/>
 		<item key="DIALOG_HEIGHT" value="659"/>
@@ -79,21 +79,21 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="387"/>
+		<item key="DIALOG_X_ORIGIN" value="371"/>
 		<item key="DIALOG_Y_ORIGIN" value="-6"/>
 		<item key="DIALOG_WIDTH" value="528"/>
 		<item key="DIALOG_HEIGHT" value="696"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
-		<item key="DIALOG_X_ORIGIN" value="393"/>
+		<item key="DIALOG_X_ORIGIN" value="383"/>
 		<item key="DIALOG_Y_ORIGIN" value="-6"/>
 		<item key="DIALOG_WIDTH" value="516"/>
 		<item key="DIALOG_HEIGHT" value="691"/>
 		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 	<section name="NewInterfaceCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="362"/>
+		<item key="DIALOG_X_ORIGIN" value="321"/>
 		<item key="DIALOG_Y_ORIGIN" value="-6"/>
 		<item key="DIALOG_WIDTH" value="578"/>
 		<item key="DIALOG_HEIGHT" value="543"/>
